@@ -29,7 +29,8 @@ export default function Start({setPage , page}){
     }
     if(page === "question"){
         return(
-            <DeckQuestion />
+            <DeckQuestion  setPage={setPage}/>
         )
     }
+  
 }

@@ -20,18 +20,77 @@ font-size: 18px;
 line-height: 22px;
 /* identical to box height */
 
-
 color: #333333;
 
 }
 .setinha{
   position: absolute;
-  margin-left: 75%;
+  margin-left: 55%;
   margin-top: 20%;
 }
 .fixar{
     position: fixed;
 margin-left: 12%;
 margin-right: auto;
+overflow-y: scroll;
 
+}
+.resposta{
+    width: 247px;
+height: 44px;
+
+font-family: 'Recursive';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #333333;
+
+}
+.butons{
+border-radius: 5px;
+display: flex;
+margin-left: 5px;
+margin-top: 5%;
+}
+.red{
+    width: 85.17px;
+height: 37.17px;
+padding-left: 5%;
+background: #FF3030;
+border-radius: 5px;
+border-color: none;
+margin-right: 3px;
+
+}
+.orange{
+    width: 85.17px;
+height: 37.17px;
+padding-left: 5%;
+background: #FF922E;
+border-radius: 5px;
+margin-right: 5px;
+}
+.green{
+    width: 85.17px;
+height: 37.17px;
+padding-left: 5%;
+background: #2FBE34;
+border-radius: 5px;
+}
+.info{
+    width: 65.04px;
+height: 37.17px;
+
+font-family: 'Recursive';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 14px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
 }
