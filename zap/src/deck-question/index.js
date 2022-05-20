@@ -1,21 +1,26 @@
 import { useState } from "react"
-
 import "./style.css"
+const Erro = "assets/imgs/error.png"
+const Duvida = "assets/imgs/duvida.png"
+const Acerto = "assets/imgs/acerto.png"
 const seta = "assets/imgs/seta.png"
 const setinha = "assets/imgs/setinha.png"
-export default function DeckQuestion({ setPage, setIcone, icone, key, react, resp,index }) {
+export default function DeckQuestion({ setRestante, setIcone, icone, restante, react, resp,index , bolean}) {
     const [card, setCard] = useState({
         etapa: 0,
         resultado: "",
 
     })
+    
+    
     const { etapa, resultado } = card;
+  
     if (etapa === 0) {
         return (
 
             <>
 
-                <main>
+             
 
                     <div className="centralizar">
 
@@ -28,7 +33,7 @@ export default function DeckQuestion({ setPage, setIcone, icone, key, react, res
 
 
                     </div>
-                </main>
+              
             </>
         )
 
@@ -39,7 +44,7 @@ export default function DeckQuestion({ setPage, setIcone, icone, key, react, res
         return (
             <>
 
-                <main>
+                
 
                     <div className="centralizar">
 
@@ -52,26 +57,48 @@ export default function DeckQuestion({ setPage, setIcone, icone, key, react, res
 
 
                     </div>
-                </main>
+               
             </>
         )
     }
     if (etapa === 2) {
+        setRestante(restante++)
         return (
             <>
 
-                <main>
+                
 
                     <div className="centralizar">
 
 
                         <div className="fundo-deck">
                             <h2 className="resposta">{resp}</h2>
-                            <div onClick={() => setCard({ ...card, etapa: 3 })} className="butons">
-                                <div onClick={() => setIcone("Erro")} className="red"><h2 className="info">Não lembrei</h2></div>
-                                <div onClick={() => setIcone("Duvida")} className="orange"><h2 className="info">Quase não lembrei</h2></div>
-                                <div onClick={() => setIcone("Acerto")} className="green"><h2 className="info">Zap!</h2></div>
+                            <div className="butons">
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Erro"})} className="red"><h2 className="info">Não lembrei</h2></div>
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Duvida" })}className="orange"><h2 className="info">Quase não lembrei</h2></div>
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Acerto" })} className="green"><h2 className="info">Zap!</h2></div>
                             </div>
+                        </div>
+
+
+
+                    </div>
+              
+            </>
+        )
+    }
+
+
+    if (etapa === 3 && resultado === "Erro" ) {
+        setIcone("Erro")
+        return (
+            <>
+
+                <main>
+                    <div className="centralizar">
+                        <div className="fundo-branco">
+                            <h2 className={` pergunta${resultado}`}>pergunta {index}</h2>
+                             <img className="imgResposta" src={Erro}alt="" />
                         </div>
 
 
@@ -81,20 +108,35 @@ export default function DeckQuestion({ setPage, setIcone, icone, key, react, res
             </>
         )
     }
-
-
-    if (etapa === 3) {
-        return (
+    if(etapa === 3 && resultado === "Duvida"){
+        setIcone("Duvida")
+        return(
             <>
 
                 <main>
-
                     <div className="centralizar">
-
-
                         <div className="fundo-branco">
-                            <h2 className={` pergunta${icone}`}>pergunta {index}</h2>
+                            <h2 className={` pergunta${resultado}`}>pergunta {index}</h2>
+                             <img className="imgResposta" src={Duvida}alt="" />
+                        </div>
 
+
+
+                    </div>
+                </main>
+            </>
+        )
+    }
+    if(resultado === "Acerto" && etapa === 3){
+        setIcone("Acerto")
+        return(
+            <>
+
+                <main>
+                    <div className="centralizar">
+                        <div className="fundo-branco">
+                            <h2 className={` pergunta${resultado}`}>pergunta {index}</h2>
+                             <img className="imgResposta" src={Acerto}alt="" />
                         </div>
 
 

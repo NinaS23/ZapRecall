@@ -4,7 +4,7 @@ height: 131px;
 background: #FFFFD5;
 box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 border-radius: 5px;
-margin-top: 5px;
+
 padding-left: 5%;
 padding-top: 5%;
 
@@ -120,7 +120,7 @@ main{
     flex-direction: column;
     justify-content:center ;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 10%;
     
 }
 .text{
@@ -154,7 +154,7 @@ height: 65px;
 background: #FFFFFF;
 box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 border-radius: 5px;
-margin-top: 5px;
+
 padding-left: 5%;
 padding-top: 5%;
 display: flex;
@@ -177,4 +177,11 @@ color: #333333
 height: 23px;
 margin-left: 50%;
 
+}
+.imgResposta{
+    width: 17px;
+    height: 17px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 50%;
 }
