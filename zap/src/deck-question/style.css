@@ -1,0 +1,37 @@
+.fundo-deck{
+width: 299px;
+height: 131px;
+background: #FFFFD5;
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+margin-top: 5px;
+padding-left: 5%;
+padding-top: 5%;
+
+}
+.perguntaObj{
+    width: 112px;
+height: 22px;
+
+font-family: 'Recursive';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #333333;
+
+}
+.setinha{
+  position: absolute;
+  margin-left: 75%;
+  margin-top: 20%;
+}
+.fixar{
+    position: fixed;
+margin-left: 12%;
+margin-right: auto;
+
+}
