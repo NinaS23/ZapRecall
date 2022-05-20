@@ -9,7 +9,7 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
     const [card, setCard] = useState({
         etapa: 0,
         resultado: "",
-        
+       
 
     })
     
@@ -90,10 +90,12 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
             </>
         )
     }
-
+    if(etapa === 3) {
+        setIcone(resultado)
+    }
 
     if (etapa === 3 && resultado === "Erro" ) {
-        setIcone("Erro")
+      
         return (
             <>
 
@@ -110,6 +112,7 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
                 </main>
             </>
         )
+       
     }
     if(etapa === 3 && resultado === "Duvida"){
         setIcone("Duvida")
@@ -149,6 +152,7 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
             </>
         )
     }
+   
   
   
 }

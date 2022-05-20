@@ -20,7 +20,7 @@ const  [icons , setIcons] = useState([])
 if(icons.length === 0){
     return(
         <div className="footer">
-            <h1>{restante}/8</h1>
+            <h1>{restante}/7</h1>
            
         </div>
      )
@@ -29,7 +29,7 @@ if(icons.length !== 0){
     return(
      
             <div className="footer">
-                <h1>{restante}/8</h1>
+                <h1>{restante}/7</h1>
                <div className="icons">
                    {icons}
                </div>
@@ -37,5 +37,22 @@ if(icons.length !== 0){
          
     )
 }
+if(restante === 7){
+    return(
+    <>
+    <footer className="finalPage">
+        <div>
+            <img src="./assets/imgs/party.png" alt="emoji festeiro" />
+            <h2>PARABÉNSSSS</h2>
+        </div>
+        <h3>Você não esqueceu de nenhum flashcard!</h3>
+        <div>{icons}</div>
+
+    </footer>
+
+</>
+    )
+}
+
  
 }

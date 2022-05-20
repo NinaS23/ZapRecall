@@ -7,7 +7,12 @@ const logoMenor = "assets/imgs/logo-pequeno.png"
 export default function DeckPrincipal({setPage , icone , setIcone}) {
     const [question , setQuestion] = useState(data)
     const [ restante , setRestante] = useState(0)
-    
+
+    question.sort(comparador);
+
+    function comparador() { 
+        return Math.random() - 0.5; 
+    }
     
     return (
         <>
@@ -30,6 +35,7 @@ export default function DeckPrincipal({setPage , icone , setIcone}) {
                         setQuestion={setQuestion}
                          setRestante={setRestante}
                          restante={restante}
+                        
                         
                     />
                 )
