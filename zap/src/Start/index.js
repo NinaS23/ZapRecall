@@ -1,5 +1,5 @@
-import CloseDeck from "../CloseDeck"
-import DeckQuestion from "../deck-question"
+import { useState } from "react"
+import DeckPrincipal from "../DeckPrincipal"
 import "./style.css"
 
 
@@ -7,6 +7,9 @@ const logo = "assets/imgs/logo.png"
 
 
 export default function Start({setPage , page}){
+    const [icone , setIcone] = useState("")
+  console.log(icone)
+
     if(page === false){
     return (
         <>
@@ -24,13 +27,9 @@ export default function Start({setPage , page}){
     }
     if(page === true){
         return (
-            <CloseDeck setPage={setPage} />
-        )
-    }
-    if(page === "question"){
-        return(
-            <DeckQuestion  setPage={setPage}/>
+            <DeckPrincipal  setPage={setPage} setIcone={setIcone} icone={icone} />
         )
     }
   
+    
 }
