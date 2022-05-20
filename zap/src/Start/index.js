@@ -1,4 +1,5 @@
 import CloseDeck from "../CloseDeck"
+import DeckQuestion from "../deck-question"
 import "./style.css"
 
 
@@ -23,7 +24,12 @@ export default function Start({setPage , page}){
     }
     if(page === true){
         return (
-            <CloseDeck />
+            <CloseDeck setPage={setPage} />
+        )
+    }
+    if(page === "question"){
+        return(
+            <DeckQuestion />
         )
     }
 }
