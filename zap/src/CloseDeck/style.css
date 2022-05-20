@@ -4,12 +4,16 @@
     align-items: center;
      margin-top: 13%;
 }
+main{
+    overflow-x: auto;
+}
 .centralizar{
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-items: center;
     margin-top: 15%;
+    
 }
 .text{
     width: 203.17px;
@@ -45,6 +49,7 @@ border-radius: 5px;
 margin-top: 5px;
 padding-left: 5%;
 padding-top: 5%;
+display: flex;
 
 }
 .pergunta{
@@ -58,4 +63,10 @@ font-size: 17px;
 line-height: 19px;
 
 color: #333333
+}
+.seta{
+    width: 20px;
+height: 23px;
+margin-left: 50%;
+
 }
