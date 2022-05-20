@@ -7,6 +7,8 @@ const logoMenor = "assets/imgs/logo-pequeno.png"
 export default function DeckPrincipal({setPage , icone , setIcone}) {
     const [question , setQuestion] = useState(data)
     const [ restante , setRestante] = useState(0)
+    
+    
     return (
         <>
         <main>
@@ -26,13 +28,13 @@ export default function DeckPrincipal({setPage , icone , setIcone}) {
                        setIcone={setIcone}
                         bolean={perg.bolean}
                         setQuestion={setQuestion}
-                        setRestante={setRestante}
-                        restante={restante}
+                         setRestante={setRestante}
+                         restante={restante}
                         
                     />
                 )
             })} 
-            <Footer restante={restante} />
+            <Footer restante={restante} icone={icone} />
             </main>
         </>
         

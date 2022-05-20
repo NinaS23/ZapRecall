@@ -9,10 +9,11 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
     const [card, setCard] = useState({
         etapa: 0,
         resultado: "",
+        
 
     })
     
-    
+   
     const { etapa, resultado } = card;
   
     if (etapa === 0) {
@@ -51,7 +52,7 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
 
                         <div className="fundo-deck">
                             <h2 className="perguntaObj">{react}</h2>
-                            <img onClick={() => setCard({ ...card, etapa: 2 })} className="setinha" src={setinha} alt="" />
+                            <img onClick={() => setCard({ ...card, etapa: 2 ,resultado: true })} className="setinha" src={setinha} alt="" />
                         </div>
 
 
@@ -61,8 +62,10 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
             </>
         )
     }
+  
     if (etapa === 2) {
-        setRestante(restante++)
+       
+
         return (
             <>
 
@@ -73,10 +76,10 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
 
                         <div className="fundo-deck">
                             <h2 className="resposta">{resp}</h2>
-                            <div className="butons">
-                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Erro"})} className="red"><h2 className="info">Não lembrei</h2></div>
-                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Duvida" })}className="orange"><h2 className="info">Quase não lembrei</h2></div>
-                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Acerto" })} className="green"><h2 className="info">Zap!</h2></div>
+                            <div  onClick={() => setRestante(restante + 1)}className="butons">
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Erro" , })} className="red"><h2 className="info">Não lembrei</h2></div>
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Duvida" , })}className="orange"><h2 className="info">Quase não lembrei</h2></div>
+                                <div onClick={() => setCard({ ...card, etapa: 3 , resultado:"Acerto" , })} className="green"><h2 className="info">Zap!</h2></div>
                             </div>
                         </div>
 
@@ -146,4 +149,6 @@ export default function DeckQuestion({ setRestante, setIcone, icone, restante, r
             </>
         )
     }
+  
+  
 }
